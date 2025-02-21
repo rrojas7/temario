@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "fbb858cf-90c9-4b7c-8c22-eef87dc28a3b",
+		"name": "Chapter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RxJava",
+			"item": [
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "List All Employees",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/listAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"listAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/findById/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"findById",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Employees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dateFrom\" : \"01/01/2024\",\r\n    \"dateTo\" : \"31/12/2024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/employees/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee or default",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/findEmployeeOrDefault/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"findEmployeeOrDefault",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List employees with filter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/listFilter?filter=filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"listFilter"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "filter",
+											"description": "Tipo:\nfilter: Lista empleados menores de 40 años\ntake: Devuelve solo los 2 primeros empleados\ntakeLast: Devuelve solo los 2 últimos empleados\nskip: Devuelve los empleados obviando el primer elemento\nskipLast: Devuelve los empleados obviando el último elemento"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Employees using Map",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/listAllWithMap?mapType=concatMap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"listAllWithMap"
+									],
+									"query": [
+										{
+											"key": "mapType",
+											"value": "concatMap"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee and User by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/findEmployeeAndUser/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"findEmployeeAndUser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Get User by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/users/findById/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"users",
+										"findById",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Account by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/users/getAccount/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"users",
+										"getAccount",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "WebFlux",
+			"item": [
+				{
+					"name": "Employee WebFlux",
+					"item": [
+						{
+							"name": "List All Employees",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/listAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"listAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/findById/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"findById",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Employees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dateFrom\" : \"01/01/2024\",\r\n    \"dateTo\" : \"31/12/2024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee or default",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/findEmployeeOrDefault/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"findEmployeeOrDefault",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List employees with filter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/listFilter?filter=filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"listFilter"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "filter",
+											"description": "Tipo:\nfilter: Lista empleados menores de 40 años\ntake: Devuelve solo los 2 primeros empleados\ntakeLast: Devuelve solo los 2 últimos empleados\nskip: Devuelve los empleados obviando el primer elemento\nskipLast: Devuelve los empleados obviando el último elemento"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Employees using Map",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/listAllWithMap?mapType=concatMap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"listAllWithMap"
+									],
+									"query": [
+										{
+											"key": "mapType",
+											"value": "concatMap"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Employee and User by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/employees/webflux/findEmployeeAndUser/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"employees",
+										"webflux",
+										"findEmployeeAndUser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User WebFlux",
+					"item": [
+						{
+							"name": "Get User by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/users/webflux/findById/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"users",
+										"webflux",
+										"findById",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Account by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/users/webflux/getAccount/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"users",
+										"webflux",
+										"getAccount",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
